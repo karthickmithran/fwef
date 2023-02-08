@@ -2,6 +2,7 @@ img="";
 objects=[];
 status="";
 alarm = "";
+object_name="";
 function preload(){
   //alarm = loadSound("alarm.mp3");
 }
@@ -17,6 +18,7 @@ function preload(){
       function start(){
         objectDetector = ml5.objectDetector("cocossd", modelLoaded);
         document.getElementById("status").innerHTML = "Status : Detecting objects";
+        object_name = document.getElementById("objectname").value;
       }
 
       function modelLoaded() {

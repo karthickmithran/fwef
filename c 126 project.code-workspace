@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../c 126 project"
+		},
+		{
+			"path": "../../AI Baby Monitor"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AI Object Finder Webapp"
+	}
+}
