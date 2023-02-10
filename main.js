@@ -52,14 +52,17 @@ function draw(){
     noFill();
     stroke(r,g,b);
     rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
-    /*if(objects[i].label == "person"){
-      document.getElementById("baby_status").innerHTML = "Baby detected";
-      alarm.stop();
+    if(objects[i].label == object_name ){
+      video.stop()
+      objectDetector.detect(gotResult);
+      document.getElementById("status").innerHTML = "Status:object mentioned found";
+      var synth = window.speechSynthesis;
+      var utterThis = new SpeechSynthesisUtterance("object mentioned found");
+      synth.speak(utterThis);
     }
     else{
-      document.getElementById("baby_status").innerHTML = "Baby not detected";
-    alarm.play();
-    }*/
+      document.getElementById("status").innerHTML = "Status:object mentioned not found";
+    }
       } 
   }
   /*if(objects.length<0){
